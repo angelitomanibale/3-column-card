@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+*,
+HTML{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+body{
+    background-color: hsl(0, 0%, 95%);
+
+    h1{
+        color: hsl(0, 0%, 95%);
+    }
+
+    p{
+        color: hsla(0, 0%, 100%, 0.75);
+        width: 100%;
+    }
+
+    button{
+        font-family: 'Lexend Deca', sans-serif;
+        background-color: hsl(0, 0%, 95%);
+        font-size: 1rem;
+        padding: 1em;
+        padding-inline: 2em;
+        border: none;
+        border-radius: 20px;
+    }
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // padding-left: 2rem;
+    // padding-right: 2rem;
+
+    .preview{
+        margin: auto;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        display: grid;
+        grid-template-columns: 330px;
+        grid-template-rows: repeat(3, 430px);
+
+        .card{
+            padding: 3em;
+            text-align: justify;
+            max-width: 330px;
+
+            img{
+                margin-bottom: 1.5em;
+            }
+
+            h1{
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: 'Big Shoulders Display', cursive;
+                margin-bottom: 1em;
+            }
+
+            p{
+                line-height: 1.5em;
+                word-spacing: 2px;
+                font-size: 1rem;
+                font-family: 'Lexend Deca', sans-serif;
+                margin-bottom: 2em;
+                
+            }
+        }
+
+        #sedans{
+            background-color: hsl(31, 77%, 52%);
+            border-radius: 10px 10px 0px 0px ;
+
+            button{
+                color:hsl(31, 77%, 52%) ;
+            }
+        }
+    
+        #suvs{
+            background-color: hsl(184, 100%, 22%);
+
+            button{
+                color:hsl(184, 100%, 22%);
+            }
+        }
+    
+        #luxury{
+            background-color: hsl(179, 100%, 13%);
+            border-radius: 0px 0px 10px 10px ;
+            button{
+                color:hsl(179, 100%, 13%);
+            }
+        }
+    }
+}
+
+@media (min-width: 900px) {
+    .preview{
+        display: grid;
+        grid-template-columns: repeat(3,330px);
+        grid-template-rows: 430px;
+        
+        #sedans{
+            border-radius: 10px 10px 10px 10px ;
+            grid-column: 1/2;
+            grid-row: 1/2;
+            
+        }
+    
+        #suvs{
+            grid-column: 2/3;
+            grid-row: 1/2;
+        }
+    
+        #luxury{
+            grid-column: 3/4;
+            grid-row: 1/2;
+            
+        }
+    }
+}
+
+
+
